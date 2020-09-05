@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+    
+            //1. Найти сумму и количество положительных элементов.
+        var count = 0;
+        var sum = 0;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] >= 0) {
+                count++;
+                sum += arr[i];
+            }
+        }
+        console.log(sum, count);
+        //2. Найти минимальный элемент массива и его порядковый номер.
+        var min = arr[0];
+        var minPosition;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                minPosition = i;
+            }
+        }
+        console.log(min, minPosition);
+        //3. Найти максимальный элемент массива и его порядковый номер.
+        var max = -Infinity;
+        var maxPosition;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                maxPosition = i;
+            }
+        }
+        console.log(max, maxPosition);
+        //4. Определить количество отрицательных элементов.
+        var count = 0;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] < 0) {
+                count++;
+            }
+        }
+        console.log(count);
+        //5. Найти количество нечетных положительных элементов.
+        var count = 0;
+        for (var i = 1; i < 24;  i++) {
+            if (arr[i] >= 0 && (i % 2)) {
+                count++;
+            }
+        }
+        console.log(count);
+        //6. Найти количество четных положительных элементов.
+        var count = 0;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] >= 0 && !(i % 2)) {
+                count++;
+            }
+        }
+        console.log(count);
+        //7. Найти сумму четных положительных элементов.
+        var sum = 0;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] >= 0 && !(i % 2)) {
+                sum += arr[i];
+            }
+        }
+        console.log(sum);
+        //8. Найти сумму нечетных положительных элементов.
+        var sum = 0;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] >= 0 && (i % 2)) {
+                sum += arr[i];
+            }
+        }
+        console.log(sum);
+        //9. Найти произведение положительных элементов.
+        var multiplication = 1;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] >= 0) {
+                multiplication *= arr[i];
+            }
+        }
+        console.log(multiplication);
+        //10. Найти определить количество элементов, равных 4.
+        var count = 0;
+        for (var i = 0; i < 24;  i++) {
+            if (arr[i] === 4) {
+                count++;
+            }
+        }
+        console.log(count);
+        //11. Найти наибольший среди элементов массива, остальные обнулить.
+        var max = -Infinity; 
+        for (var i = 0; i < arr.length;  i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] !== max) {
+                arr[i] = 0;
+            }
+        }
+        console.log(arr);
+        //12. Вычислить разность соответствующих элементов массивов и записать в новый массив [-30, -41, 105...].
+        
+        let arr1 = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+        let arr2 = [46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47,16,-37,54,-4,72,-56,47,4,-16,25,-37];
+        let arr3 = [];
+
+        for (let i = 0; i < arr1.length; i++) {
+            arr3[i] = arr1[i] - arr2[i];
+        }
+        console.log(arr3);
+    </script>
+</body>
+</html> 
