@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let list = [{
+            firstName: 'Alex',
+            lastName: 'Pritula',
+            born: 1990,
+            gender: 'male'
+        }, {
+            firstName: 'Andrey',
+            lastName: 'Banniy',
+            born: 1986,
+            gender: 'male'
+        }, {
+            firstName: 'Olga',
+            lastName: 'Omelchenko',
+            born: 1991,
+            gender: 'female'
+        }, {
+            firstName: 'Dasha',
+            lastName: 'Bilinok',
+            born: 1987,
+            gender: 'female'
+        }, {
+            firstName: 'Elena',
+            lastName: 'Polnyakova',
+            born: 1990,
+            gender: 'female'
+        }, {
+            firstName: 'Pavel',
+            lastName: 'Kereev',
+            born: 1992,
+            gender: 'male'
+        }, {
+            firstName: 'Nina',
+            lastName: 'Juke',
+            born: 1960,
+            gender: 'female'
+        }, ];
+        let sumAge = 0;
+        for (let i = 0; i < list.length; i++) {
+            sumAge += 2019 - list[i].born;
+        }
+        console.log(sumAge / list.length)
+        let male = 0;
+        let female = 0;
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].gender === 'male') {
+                male++;
+            } else if (list[i].gender === 'female') {
+                female++;
+            }
+        }
+        console.log("Мужчин" + " = " + male);
+        console.log("Женщин" + " = " + female);
+        if (male > female) {
+            console.log("Мужчин больше!");
+        } else {
+            console.log("Женщин больше!");
+        }
+    </script>
+</body>
+</html>
